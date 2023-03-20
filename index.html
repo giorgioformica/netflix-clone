@@ -4,11 +4,901 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Esercizio Travel Agency</title>
+    <title>Netflix clone</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+        <nav class="navbar navbar-expand-lg shadow-sm bg-dark navbar-dark" data-bs-theme="dark">
+            <div class="container-lg">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/logo.png" alt="logo travelo" width="120">
+                </a>
+                <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse custom-collapse-navbar" id="navbarScroll">
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 300px;">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#tvShows">Tv Shows</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#movies">Movies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#recentlyAdded">Recently Added</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#myList">My List</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex justify-content-evenly align-items-center">
+                        <span>
+                            <i class="ri-search-line ri-lg text-light me-3"></i>
+                        </span>
+                        <span class="me-3 text-light">
+                           KIDS
+                        </span>
+                        <span>
+                            <i class="ri-notification-2-fill text-light me-3 fs-4"></i>
+                        </span>
+                        <div class="nav-item dropdown text-light">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="./assets/profilo.jpg" alt="" width="35" height="35" class="rounded-circle">
+                            </a>
+                            <ul class="dropdown-menu border-0 rounded-0 custom-dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profilo</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark mt-1" data-bs-theme="dark">
+            <div class="container-lg">
+                <div class="d-flex">
+                    <a class="navbar-brand" href="#">
+                        <h2>TV Shows</h2>
+                    </a>
+                    <select class="form-select bg-dark text-white border-white" id="floatingSelect" aria-label="Floating label select example">
+                    <option selected>Genres</option>
+                    <option value="1">Adventure</option>
+                    <option value="2">Comemdy</option>
+                    <option value="3">Dramatic</option>
+                  </select>
+                </div>
+                    <div class="d-flex justify-content-evenly align-items-center text-secondary ">
+                        <button class="me-1 rounded-2 btn py-0 px-2 list-selector btn-outline-secondary">
+                            <i class="ri-align-left m-0"></i>
+                        </button>
+                        <button  class="me-1 rounded-2 btn py-0 px-2 list-selector btn-outline-secondary">
+                            <i class="ri-layout-grid-fill m-0"></i>
+                        </button>
+                    </div>
+            </div>
+            </div>
+        </nav>
+    <main>
+        <section class="section1">
+        <div class="container mt-3">
+            <div class="row gy-5">
+                <div class="col-12">
+                    <h4 class="text-light mt-3">Trending Now</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5  d-none d-md-block">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/17.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/13.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/14.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/15.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/16.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/17.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 d-md-none">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel-3" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel-3"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel-3"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section2">
+        <div class="container mt-3">
+            <div class="row gy-5">
+                <div class="col-12">
+                    <h4 class="text-light mt-3">Whatch it again</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5  d-none d-md-block">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel-2" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/17.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/16.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/15.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/14.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/13.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel-2"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel-2"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 d-md-none">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel-4" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel-4"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel-4"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section3 mb-5">
+        <div class="container mt-3">
+            <div class="row gy-5">
+                <div class="col-12">
+                    <h4 class="text-light mt-3">New Releases</h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5  d-none d-md-block">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel-5" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/17.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/16.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/15.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/14.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/13.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-2">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel-5"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel-5"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid mt-5 d-md-none">
+            <div class="row g-0">
+                <div class="col">
+                    <div id="movies-carousel-6" class="carousel slide mb-5">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/12.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/11.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/10.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/9.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/8.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/7.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/6.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/5.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/4.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/3.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="container-fluid">
+                                    <div class="row g-1">
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/2.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card border-0">
+                                                <img src="./assets/movies/1.png" class="card-img-top" alt="...">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#movies-carousel-6"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#movies-carousel-6"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+    <footer class="container bg-dark mt-5 text-secondary ">
+        <div class="row">
+            <div class="col-md-3 d-flex flex-column align-items-center align-items-md-start">
+                <div class="icon-container">
+                    <a href="#" class="text-decoration-none text-secondary fs-2 me-2">
+                        <i class="ri-facebook-box-fill"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none text-secondary fs-2 me-2">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none text-secondary fs-2  me-2">
+                        <i class="ri-twitter-fill"></i>
+                    </a>
+                    <a href="#" class="text-decoration-none text-secondary fs-2  me-2">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                </div>
+                <p>Audio and Subtitles</p>
+                <p>Media center</p>
+                <p>Privacy</p>
+                <p>Contact Us</p>
+                <button type="button" class="btn btn-outline-secondary me-5 px-2" style="width:fit-content">Service code</button>
+                <p class="mt-4 fs-10">1997 Netflix Copiright etc etc</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column d-none d-md-block">
+                <div class="mt-5">
+                </div>
+                <p>Audio Descriptions</p>
+                <p>Investor Relations</p>
+                <p>Legal Notices</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column d-none d-md-block">
+                <div class="mt-5">
+                </div>
+                <p>Help Center</p>
+                <p>Jobs</p>
+                <p>Cookies Preferencies</p>
+            </div>
+            <div class="col-md-3 d-flex flex-column d-none d-md-block">
+                <div class="mt-5">
+                </div>
+                <p>Gift Cards</p>
+                <p>Terms of use</p>
+                <p>Corporate Informations</p>
+            </div>
+        </div>
+    </footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
