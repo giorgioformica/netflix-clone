@@ -20,9 +20,9 @@ body{
     .custom-collapse-navbar{
             position: absolute;
             top: 82px;
-            z-index: 1;
+            z-index: 4;
             width:100%;
-            background-color: #e3f2fd;
+            background-color: #212529;
             padding: 20px;
             left: 0;
     }
@@ -80,4 +80,46 @@ footer{
 }
 .fs-10{
     font-size:10px;
+}
+.searchBar{
+    position: absolute;
+    top: 57px;
+    right: 0;
+    min-width: 300px;
+    opacity:0;
+    transition: all .5s ease;
+    height:0;
+    overflow:hidden
+}
+#searchNow{
+        opacity: 1;
+        height: 100%;
+        transition: all 2s ease;
+}
+#searchInput{
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid grey;
+    color: white;
+    width:80vw;
+}
+#searchInput:focus-visible{
+    border:none !important;
+    border-bottom: 1px solid white;
+}
+#searchInput:focus{
+    border:none !important;
+    border-bottom: 1px solid white;
+}
+@media screen and (min-width: 600px) {
+    #searchInput{
+        width: auto;
+    }
+}
+.close-search{
+    position:absolute;
+    top:0;
+    right:20px;
+    cursor:pointer
 }

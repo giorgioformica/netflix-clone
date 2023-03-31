@@ -5,3 +5,9 @@ window.onload= (event)=>{
     }
 sections.forEach(section => section.style.opacity = 1)
 }
+function callSearchBox()  {
+    document.querySelector('.searchBar').id = 'searchNow'
+}
+function closeSearchBox() {
+    document.querySelector('.searchBar').removeAttribute('id') 
+}
